@@ -1,6 +1,7 @@
 AI Agent 教程_ithelp(AI Agent Tutorial_ithelp)
 
 資料來源: https://ithelp.ithome.com.tw/users/20111706/ironman/8049
+https://www.youtube.com/watch?v=vvqhzbp4J5A
 
 01:https://ithelp.ithome.com.tw/articles/10351508
 02(Fabric簡介):https://ithelp.ithome.com.tw/articles/10352335
