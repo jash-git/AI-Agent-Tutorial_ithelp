@@ -1,0 +1,33 @@
+Linux docker 安裝
+
+資料來源: https://medium.com/ching-i/docker-%E4%BB%8B%E7%B4%B9%E8%88%87%E5%AE%89%E8%A3%9D-6ca8ea6beaf0
+https://docs.docker.com/engine/install/
+
+01.若要查看作業系統的版本可使用以下指令
+$ cat /etc/lsb-release
+
+02.安裝Docker [ https://docs.docker.com/engine/install/ubuntu/ ]
+
+# Add Docker's official GPG key:
+sudo apt-get update
+sudo apt-get install ca-certificates curl
+sudo install -m 0755 -d /etc/apt/keyrings
+sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+sudo chmod a+r /etc/apt/keyrings/docker.asc
+
+# Add the repository to Apt sources:
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+  $(. /etc/os-release && echo "${UBUNTU_CODENAME:-$VERSION_CODENAME}") stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+sudo apt-get update
+
+
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+
+
+sudo docker run hello-world
+
+
+03.安裝完 Docker 後使用以下指令確認安裝的版本
+$ sudo docker version
